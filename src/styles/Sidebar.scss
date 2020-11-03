@@ -1,0 +1,33 @@
+@import "./constants.scss";
+
+.sidebar-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 80px;
+    margin-right: 100px;
+    .links {
+        padding-top: $padding-from-top-bar;
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            .logo-title {
+                margin-left: 10px;
+            }
+        }
+    }
+    .contact {
+        margin-bottom: 50px;
+    }
+    .sidebar-link {
+        margin: 10px 0px;
+    }
+    .sidebar-link:first-child {
+        margin-top: 0px;
+    }
+    .sidebar-link:last-child {
+        margin-bottom: 0px;
+    }
+}

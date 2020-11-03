@@ -1,0 +1,51 @@
+@import "./global.scss";
+
+.add-image-wrapper {
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+    .add-image-form {
+        display: flex;
+        flex-direction: column;
+        .select-image {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        .select-image + label {
+            font-size: $font-small;
+            color: $link;
+            margin-bottom: 5px;
+        }
+        .selected-image-name {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .add-description {
+            outline: none;
+            background-color: transparent;
+            resize: none;
+            margin: 10px 0px;
+            padding: 10px;
+        }
+        .upload-image {
+            align-self: flex-end;
+            font-style: inherit;
+            color: $link;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: $mobile-breakpoint) {
+    .add-image-wrapper {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+}

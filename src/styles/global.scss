@@ -1,0 +1,32 @@
+@import './constants.scss';
+
+.disabled {
+    pointer-events: none;
+    animation: fade-out forwards 0.5s;
+}
+
+.link {
+    cursor: pointer;
+}
+.link:hover {
+    opacity: 0.7;
+}
+
+.selected {
+    font-weight: bold;
+}
+
+.no-results {
+    text-align: center;
+    color: $gray;
+    font-size: $font-small;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}

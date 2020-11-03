@@ -1,0 +1,9 @@
+.desktop-view-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .desktop-content-wrapper {
+        display: flex;
+        height: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+@import "./styles/constants.scss";
+
+.app-wrapper {
+  height: 100%;
+}
+
+input {
+  background: transparent;
+  border: none;
+  font-style: italic;
+  outline: none;
+  color: var(--color);
+  font-family: BluuNext;
+}
+
+::placeholder {
+  color: var(--color);
+}
+
+button {
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+// @media only screen and (max-width: $mobile-breakpoint) {
+//   html.touch *:hover {
+//     all: unset !important;
+//   }
+// }

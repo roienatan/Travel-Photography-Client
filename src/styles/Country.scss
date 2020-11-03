@@ -1,0 +1,9 @@
+@import './constants.scss';
+
+.country-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: $padding-from-top-bar;
+    overflow: scroll;
+    width: 100%;
+}

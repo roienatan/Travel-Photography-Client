@@ -1,0 +1,30 @@
+@import './constants.scss';
+
+.image-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    .image {
+        width: 60%;
+    }
+    .image-description {
+        font-style: italic;
+        margin-top: 10px;
+    }
+}
+
+.image-wrapper:last-child {
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: $mobile-breakpoint) {
+    .image-wrapper {
+        margin-bottom: 50px;
+        .image {
+            width: 100%;
+        }
+        .image-description {
+            text-align: center;
+        }
+    }
+}
