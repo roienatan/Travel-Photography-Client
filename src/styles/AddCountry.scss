@@ -2,18 +2,18 @@
 @import "./constants.scss";
 
 .add-country-wrapper {
-    position: relative;
-    margin-top: 15px;
-    .add-country {
-        display: flex;
-        .add-button {
-            color: $link;
-        }
+  position: relative;
+  margin-top: 15px;
+  .add-country {
+    display: flex;
+    .add-button {
+      color: $link;
     }
+  }
 }
 
 @media only screen and (max-width: $mobile-breakpoint) {
-    .add-country {
-        justify-content: space-between;
-    }
+  .add-country {
+    justify-content: space-between;
+  }
 }

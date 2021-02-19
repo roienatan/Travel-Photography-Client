@@ -5,4 +5,4 @@ export const API = {
     GET_IMAGE: 'http://localhost:3001/images/getImage/',
     GET_COUNTRY_IMAGES: 'http://localhost:3001/images/getCountryImages/',
     ADD_IMAGE: 'http://localhost:3001/images/addImage',
-}
+};

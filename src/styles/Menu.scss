@@ -1,60 +1,52 @@
 @import "./constants.scss";
 
 .menu-wrapper {
+  position: fixed;
+  top: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  animation: go-up forwards 0.2s;
+  padding-top: $padding-from-top-bar;
+  .menu-link {
+    font-size: $font-medium;
+    margin: 12px 0;
+  }
+  .menu-link:first-child {
+    margin-top: 10vh;
+  }
+  .menu-link:last-child {
+    margin-bottom: 0px;
+  }
+  .menu-countries-wrapper {
     position: fixed;
-    top: 100%;
+    z-index: 2;
+    left: 100%;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100%;
-    animation: go-up forwards 0.2s;
-    padding-top: $padding-from-top-bar;
-    .menu-link {
-        font-size: $font-medium;
-        margin: 12px 0;
+    &.show {
+      animation: go-left forwards 0.2s;
     }
-    .menu-link:first-child {
-        margin-top: 10vh;
-    }
-    .menu-link:last-child {
-        margin-bottom: 0px;
-    }
-    .menu-countries-wrapper {
-        position: fixed;
-        z-index: 2;
-        left: 100%;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        &.show {
-            animation: go-left forwards 0.2s;
-        }
 
-        .close {
-            align-self: flex-end;
-            margin-right: 20px;
-            margin-top: 10px;
-            font-size: $font-medium;
-        }
+    .close {
+      align-self: flex-end;
+      margin-right: 20px;
+      margin-top: 10px;
+      font-size: $font-medium;
     }
+  }
 }
 
 @keyframes go-up {
-    from {
-        top: 100%;
-    }
-    to {
-        top: 0;
-    }
+  from { top: 100%; }
+  to { top: 0; }
 }
 
 @keyframes go-left {
-    from {
-        left: 100%;
-    }
-    to {
-        left: 0;
-    }
+  from { left: 100%; }
+  to { left: 0; }
 }

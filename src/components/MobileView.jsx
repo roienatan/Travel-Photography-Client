@@ -6,15 +6,15 @@ import Menu from './Menu'
 import '../styles/MobileView.scss';
 
 export default function MobileView() {
-    const showMenu = useSelector(state => state.layoutReducer.showMenu);
+  const showMenu = useSelector(state => state.layoutReducer.showMenu);
 
-    return (
-        <div className='mobile-view-wrapper'>
-            <TopBarMobile />
-            <div className='mobile-content-wrapper'>
-                <Routes />
-                {showMenu && <Menu />}
-            </div>
-        </div>
-    )
+  return (
+    <div className='mobile-view-wrapper'>
+      <TopBarMobile />
+      <div className='mobile-content-wrapper'>
+        <Routes />
+        {showMenu && <Menu />}
+      </div>
+    </div>
+  )
 }

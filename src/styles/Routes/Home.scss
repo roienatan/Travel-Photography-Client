@@ -1,7 +1,15 @@
-@import '../constants.scss';
+@import "../constants.scss";
 
 .home-wrapper {
-    padding-top: $padding-from-top-bar;
-    overflow: scroll;
-    width: 100%;
+  padding-top: $padding-from-top-bar;
+  overflow: scroll;
+  width: 100%;
+  height: calc(100vh - 150px);
+  margin-left: 400px;
+}
+
+@media only screen and (max-width: $mobile-breakpoint) {
+  .home-wrapper {
+    margin-left: unset;
+  }
 }

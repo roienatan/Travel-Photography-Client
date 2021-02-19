@@ -5,10 +5,10 @@ import { countriesReducer } from './countries';
 import { imagesReducer } from './images';
 
 const reducers = combineReducers({
-    authReducer,
-    layoutReducer,
-    countriesReducer,
-    imagesReducer
-})
+  authReducer,
+  layoutReducer,
+  countriesReducer,
+  imagesReducer
+});
 
 export default reducers;

@@ -17,7 +17,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={color}>
-      <div className="app-wrapper" style={{ backgroundColor: color.mainBackgroundColor, color: color.textColor }}>
+      <div style={{ backgroundColor: color.mainBackgroundColor, color: color.textColor }}>
         <ResponsiveView />
       </div>
     </ThemeContext.Provider>

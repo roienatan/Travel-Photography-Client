@@ -1,13 +1,13 @@
-@import './constants.scss';
+@import "./constants.scss";
 
 .top-bar-mobile-wrapper {
-    display: flex;
-    justify-content: space-between;
-    backdrop-filter: saturate(180%) blur(20px);
-    align-items: center;
-    height: $top-bar-height;
-    position: fixed;
-    top: 0;
-    z-index: 2;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: saturate(180%) blur(20px);
+  align-items: center;
+  height: $top-bar-height;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
 }

@@ -10,26 +10,26 @@ import '../styles/Country.scss';
 const queryString = require('query-string');
 
 export default function Country() {
-    const location = useLocation();
-    const dispatch = useDispatch();
-    const imagesData = useSelector(state => state.imagesReducer.images);
-    const loading = useSelector(state => state.imagesReducer.loading);
+  const location = useLocation();
+  const dispatch = useDispatch();
+  const imagesData = useSelector(state => state.imagesReducer.images);
+  const loading = useSelector(state => state.imagesReducer.loading);
 
-    useEffect(() => {
-        const parsedURL = queryString.parse(location.search);
-        dispatch(getImages(parsedURL.id));
-    }, [location.search]) // Only re-run the effect if country changes
+  useEffect(() => {
+    const parsedURL = queryString.parse(location.search);
+    dispatch(getImages(parsedURL.id));
+  }, [location.search, dispatch])
 
-    const images = imagesData.map(image => {
-        return <Image key={image.id} imageData={image} /> 
-    })
-    
-    return (
-        <div className='country-wrapper'>
-            {isAdmin() && <AddImage />}
-            {!loading && images.length === 0 && <span className='no-results'>No Results</span>}
-            {!loading && images}
-            {loading && <Loading />}
-        </div>
-    )
+  const images = imagesData.map(image => {
+    return <Image key={image.id} imageData={image} />
+  });
+
+  return (
+    <div className='country-wrapper'>
+      {isAdmin() && <AddImage />}
+      {!loading && images.length === 0 && <span className='no-results'>No Results</span>}
+      {!loading && images}
+      {loading && <Loading />}
+    </div>
+  )
 }

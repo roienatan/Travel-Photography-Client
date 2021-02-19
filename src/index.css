@@ -1,7 +1,3 @@
-html {
-  height: 100%;
-}
-
 @font-face {
   font-family: BluuNext;
   src: url(./assets/fonts/BluuNext-Bold.otf);
@@ -12,9 +8,4 @@ body {
   font-family: BluuNext;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-}
-
-#root {
-  height: 100%;
 }
