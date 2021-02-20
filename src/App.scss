@@ -7,6 +7,7 @@ input {
   outline: none;
   color: var(--color);
   font-family: BluuNext;
+  font-size: 16px; // To disable iOS auto input zooming
 }
 
 ::placeholder {
@@ -24,8 +25,8 @@ button:hover {
   opacity: 0.7;
 }
 
-// @media only screen and (max-width: $mobile-breakpoint) {
-//   html.touch *:hover {
-//     all: unset !important;
-//   }
-// }
+@media only screen and (max-width: $mobile-breakpoint) {
+  html.touch *:hover {
+    all: unset !important;
+  }
+}

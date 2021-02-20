@@ -1,0 +1,26 @@
+@import "../constants.scss";
+
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .login-error-wrapper {
+    color: $red;
+  }
+  .form-decoration {
+    margin: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .login-btn {
+      border: 1px solid;
+      border-radius: 10px;
+    }
+    input {
+      border-bottom: 1px solid;
+      margin: 10px;
+    }
+  }
+}

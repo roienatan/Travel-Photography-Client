@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logout } from '../actions/index';
+import '../styles/Logout.scss';
 
 export default function Logout() {
   const history = useHistory();
@@ -14,6 +15,6 @@ export default function Logout() {
   };
 
   return (
-    <div onClick={handleLogout}>Logout</div>
+    <div className='link logout-wrapper' onClick={handleLogout}>Logout</div>
   )
 }

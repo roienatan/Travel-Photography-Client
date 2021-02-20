@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import '../../styles/Login.scss';
-//import Logo from '../assets/icons/logo.icon';
+import '../../styles/Routes/Login.scss';
+import Logo from '../../assets/icons/logo.icon';
 import { login } from '../../actions/index';
 import Loading from '../Loading';
 
@@ -31,20 +31,17 @@ export default function Login() {
 
   return (
     <div className='login-wrapper'>
+      <Logo width='50px' />
+      <form className={loading ? 'form-decoration disabled' : 'form-decoration'} onSubmit={handleLogin}>
+        <label>Username</label>
+        <input type='text' name='username' value={username} autoComplete='username' onChange={e => setUsername(e.target.value)} />
+        <label>Password</label>
+        <input type='password' name='password' value={password} autoComplete='current-password' onChange={e => setPassword(e.target.value)} />
+        <input className={disabled ? 'link login-btn disabled' : 'link login-btn'} type='submit' value='Sign In' />
+      </form>
       {error && <div className='login-error-wrapper'>
         <div className='error-text'>The username or password you entered is incorrect</div>
       </div>}
-      <form className={loading ? 'form-decoration disabled' : 'form-decoration'} onSubmit={handleLogin}>
-        <label>
-          USERNAME
-                        <input type='text' name='username' value={username} autoComplete='username' onChange={e => setUsername(e.target.value)} />
-        </label>
-        <label>
-          PASSWORD
-                        <input type='password' name='password' value={password} autoComplete='current-password' onChange={e => setPassword(e.target.value)} />
-        </label>
-        <input className={disabled ? 'login-btn disabled' : 'login-btn'} type='submit' value='Sign In' />
-      </form>
       {loading && <Loading />}
     </div>
   )

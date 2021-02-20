@@ -26,7 +26,7 @@ export default function About() {
         I hope to express the deep spirituality that I find in nature and to bring back images to people that
         might not otherwise have an opportunity to witness the beauty.</p>
 
-      <div className='link' onClick={mailTo}>roie.natan@gmail.com</div>
+      <p>Feel free to reach me at: <div className='link email' onClick={mailTo}>roie.natan@gmail.com</div></p>
     </div>
   )
 }
